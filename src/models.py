@@ -13,7 +13,7 @@ class TaskStatus(str, Enum):
 
 
 class Task(models.Model):
-    id = fields.UUIDField(pk=True, default=uuid.uuid4)
+    id = fields.UUIDField(primary_key=True, default=uuid.uuid4)
     title = fields.CharField(max_length=200)
     description = fields.TextField(null=True)
     status = fields.CharEnumField(TaskStatus, max_length=32, default=TaskStatus.CREATED)

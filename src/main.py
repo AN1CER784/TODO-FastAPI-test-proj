@@ -1,8 +1,8 @@
 import uvicorn
 from fastapi import FastAPI
 from tortoise.contrib.fastapi import register_tortoise
-from config import DATABASE_URL, APP_TITLE
-from api.routers import tasks_router
+from src.config import DATABASE_URL, APP_TITLE
+from src.api.routers import tasks_router
 
 app = FastAPI(title=APP_TITLE)
 
