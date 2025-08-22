@@ -1,3 +1,5 @@
+
+
 import uvicorn
 from fastapi import FastAPI
 from tortoise.contrib.fastapi import register_tortoise
@@ -12,8 +14,8 @@ register_tortoise(
     app,
     db_url=DATABASE_URL,
     modules={"models": ["src.models"]},
-    generate_schemas=True,
+    generate_schemas=False,
     add_exception_handlers=True,
 )
 if __name__ == "__main__":
-    uvicorn.run(app="main:app", reload=True)
+    uvicorn.run(app="src.main:app", reload=True, host="0.0.0.0", port=8000)
