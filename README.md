@@ -42,7 +42,7 @@ docker-compose up --build
 
 ## 3. Тесты
 
-Запуск тестов через docker-compose ():
+Запуск тестов через docker:
 
 ```bash
 docker container exec -it fastapitodo-web-1 pytest
